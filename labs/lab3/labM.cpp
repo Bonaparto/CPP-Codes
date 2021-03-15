@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+ int sum=0,a;
+ while (cin>>a){
+  sum+=a;
+ }
+ cout << sum;
+}
