@@ -4,9 +4,9 @@ using namespace std;
 
 
 int main(){
-    vector <pair<int, int> > vv(7)
+    vector <pair<int, int> > vv(7);
     for(int i = 0; i < 7; ++i){
-        vv[i] = make_pair(i,)
+        vv[i] = make_pair(i,);
     } 
     int n;
     cin >> n;
