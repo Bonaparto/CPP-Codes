@@ -29,7 +29,7 @@ int main(){
             if(a == "C") sum += 2 * b;
             if(a == "D+") sum += 1.5 * b;
             if(a == "D") sum += 1 * b;
-            if(a == "F") sum += 0 * b; // useless line
+            if(a == "F") sum += 0 * b; // useless line lol
         }
         m.push_back(make_pair(sum / cnt, make_pair(n, s)));
     }
