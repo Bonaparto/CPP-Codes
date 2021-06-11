@@ -7,7 +7,7 @@ int main(){
     set <string> v;
     do{
         v.insert(s);
-        } while(next_permutation(s.begin(),s.end()));
+        } while(next_permutation(s.begin(), s.end()));
     while(cin >> m){
         if(v.find(m) != v.end()){
             cout << "YES";

@@ -10,7 +10,6 @@ void solve(){
         else if(k >= a) cout << ((((k - 1) / a) + (k - 1) % a) % a) << endl;         
         else if(k < a) cout << k << endl;
     }
-    
 }
 
 int main(){

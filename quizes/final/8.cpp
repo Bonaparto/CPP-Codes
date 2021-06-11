@@ -13,8 +13,7 @@ int main(){
     char a[26][26];
     for(int i = 0; i < 26; ++i){
         for(int j = 0; j < 26; ++j){
-            if('a' + i + j <= 'z')
-            a[i][j] = char('a' + i + j);
+            if('a' + i + j <= 'z') a[i][j] = char('a' + i + j);
             else a[i][j] = char('a' + (i + j) % 26);
         }
     }
