@@ -6,6 +6,9 @@
         "limits": "cpp",
         "valarray": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "unordered_set": "cpp",
+        "bitset": "cpp",
+        "set": "cpp"
     }
 }
