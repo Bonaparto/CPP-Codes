@@ -8,7 +8,10 @@ int main(){
     sum = a[0];
     while(l != n)
     {
-        
+        if(sum == k)
+        {
+            
+        }
     }
     cout << ans;
 }
