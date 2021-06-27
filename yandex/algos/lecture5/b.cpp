@@ -8,7 +8,24 @@ int main(){
     sum = a[0];
     while(l != n)
     {
-        
+        if(sum == k)
+        {
+            sum -= a[l];
+            ans++; 
+            l++;
+        }
+        else if(sum < k)
+        {
+            r++;
+            sum += a[r];
+        }
+        else
+        {
+            sum -= a[l];
+            l++;
+        }
+        if(sum < k && r == n - 1) break;
+
     }
     cout << ans;
 }
