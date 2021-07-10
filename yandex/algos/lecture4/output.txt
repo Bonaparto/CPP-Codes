@@ -1,0 +1,12 @@
+Ivanov:
+aaa 52
+bbb 3
+ccc 45
+Petrov:
+aaa 9
+bbb 7
+ddd 34
+Sidorov:
+aaa 356
+Ziborov:
+eee 234
