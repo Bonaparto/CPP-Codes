@@ -1,56 +1,38 @@
 #include <iostream>
 using namespace std;
 
-int a[30001];
-
-int cnt(int x, int x1)
-{
-    int l = x-1, r = l, ans = 0;
-    if(l < x1-1)
-    {
-        while(l != x1-1)
-        {
-            if(a[l] < a[r])
-            {
-                ans += a[r] - a[l];
-                l = r;
-            }
-            else
-            {
-                l = r;
-                r++;
-            }
-            if(r == x1-1 && a[l] >= a[r]) break;
-        }
-    }
-    else
-    {
-        while(r != x1-1)
-        {
-            if(a[r] < a[l])
-            {
-                ans += a[l] - a[r];
-                r = l;
-            }
-            else
-            {
-                r = l;
-                l--;
-            }
-            if(l == x1-1 && a[r] >= a[l]) break;
-        }
-    }
-    return ans;
-}
-
 int main(){
     int n, m;
     cin >> n;
-    for(int i = 0; i < n; ++i) cin >> a[i] >> a[i];
+    int a[n], pref[n+1], pref1[n+1];
+    pref[0] = 0; pref1[n] = 0;
+    cin >> a[0] >> a[0];
+    for(int i = 1; i < n; ++i)
+    { 
+        cin >> a[i] >> a[i];
+        if(a[i-1] < a[i])
+        {
+            pref[i] = pref[i-1] + a[i] - a[i-1];
+        }
+        else pref[i] = pref[i-1];
+    }
+    for(int i = n-1; i > 0; --i)
+    {
+        if(a[i] < a[i-1])
+        {
+            pref1[i] = pref1[i+1] + a[i-1] - a[i];
+        }
+        else pref1[i] = pref1[i+1];
+    }
     cin >> m;
     for(int i = 0; i < m; ++i)
     {
         int x, x1; cin >> x >> x1;
-        cout << cnt(x, x1) << endl;
+        if(x < x1)
+        {
+            cout << pref[x1-1] - pref[x-1];
+        }
+        else cout << pref1[x1] - pref1[x]; 
+        cout << endl;
     }
 }
