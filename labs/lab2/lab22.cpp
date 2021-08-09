@@ -16,8 +16,8 @@ if ((m == 0) && (n <= 20) && (n >= 6)){
     
     cout << "Super";
 }
-else if ((m == 0) && (n >= 2) && (n <= 5)){
     
+else if ((m == 0) && (n >= 2) && (n <= 5)){
     cout << "Not Super";
 }
 else if ((m == 0 )&& (n >= 20)){

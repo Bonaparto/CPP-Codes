@@ -9,6 +9,12 @@
         "iosfwd": "cpp",
         "unordered_set": "cpp",
         "bitset": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp"
     }
 }
