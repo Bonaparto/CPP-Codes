@@ -7,24 +7,21 @@ int main(){
     int a[n];
     for(int i = 0; i < n; ++i) cin >> a[i];
     sort(a, a+n);
-    while(r < n)
+    while(l < n - 2)
     {
         if(r - l >= 2 && a[l] * k >= a[r])
         {
             if(a[r] != a[l+1] && a[l+1] != a[l]) ans += 6;
-            else if((a[l] == a[l+1] != a[r]) || (a[l] != a[l+1] == a[r]) || (a[l] == a[r] != a[l+1])) ans += 3;
-            else ans++;
-            //cout << a[l] << a[l+1] << a[r] << " "; 
-            //cout << a[r] / a[l] << endl;
+            else if((a[l] == a[l+1] && a[l+1] != a[r]) || (a[l] != a[l+1] && a[l+1] == a[r])) ans += 3;
+            else ans++;  
             r++;
+            int r1 = r - 1; 
+            while(a[r1] == a[r] && r < n - 1) r++;
+            if(r == n - 1 && a[r] == a[l]) l = n - 2;
+            else if(r == n - 1) l++;
+            cout << l << " " << r <<  " " << ans << endl;
         }
-        else if(a[l] * k < a[r])
-        {
-            int l1 = l;
-            while(a[l1] == a[l]) l++;
-        }
-        if(r - l < 2) r++;
-        //cout << ans << endl;
+        else if(a[l] * l < a[r]) l++;
     }
     cout << ans;
 }
