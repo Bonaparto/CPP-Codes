@@ -13,11 +13,9 @@ int main(){
         if((floor(w / (b + (2 * m))) * floor(h / (a + (2 * m))) >= n) || (floor(w / (a + (2 * m))) * floor(h / (b + (2 * m))) >= n))
         {
             if(ans < m) ans = m;
-            l = m + 1;
-            //cout << ans << endl;
+            l = m + 1; 
         }
         else r = m;
-        //cout << l << " " << m << " " << r << " " << ans << " " << floor(w / (b + (2 * m))) + floor(h / (a + (2 * m))) << " " << floor(w / (a + (2 * m))) + floor(h / //(b + (2 * m))) << endl;
     }
     cout << fixed << setprecision(0) << ans;
 }
